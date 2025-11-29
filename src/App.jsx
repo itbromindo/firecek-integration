@@ -208,7 +208,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
               <Zap className="h-6 w-6 text-white" />
             </div> */}
             <img
-              src="public/firecek-logo.png"
+              src="/firecek-logo.png"
               alt="Firecek Logo"
               className="h-10 object-contain"
             />
@@ -316,7 +316,7 @@ const Hero = ({ onCtaClick }) => (
         {/* Image */}
         {/* On Mobile: opacity-15 (faded bg). On Desktop: opacity-100 (full visibility) */}
         <img
-          src="public/hero.jpg"
+          src="/hero.jpg"
           alt="Firecek Hero Image"
           className="w-full h-full object-cover opacity-15 lg:opacity-100"
         />
