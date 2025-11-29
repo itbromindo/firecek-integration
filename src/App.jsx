@@ -28,8 +28,7 @@ import {
 // ⚠️ PENTING: Masukkan SITE KEY Google Recaptcha Anda di sini.
 // Contoh: const RECAPTCHA_SITE_KEY = "6LeIxAcTAAAAAJcZZZZZZZZZZZZZZZZZZZZZ";
 // JANGAN masukkan Secret Key di sini! Secret Key hanya untuk backend.
-const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
-
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || "";
 // --- Components ---
 
 const Button = ({ children, variant = 'primary', className = '', onClick, type = 'button', disabled = false }) => {
