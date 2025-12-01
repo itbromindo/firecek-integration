@@ -271,7 +271,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   );
 };
 
-const Hero = ({ onCtaClick }) => (
+const Hero = ({ onCtaClick, onSalesClick }) => (
   <div className="relative overflow-hidden bg-white">
     <div className="max-w-7xl mx-auto">
       {/* Content Wrapper */}
@@ -294,7 +294,7 @@ const Hero = ({ onCtaClick }) => (
                 </Button>
               </div>
               <div className="">
-                <Button variant="outline" className="w-full flex items-center justify-center px-8 py-3 text-base md:py-4 md:text-lg bg-white/80 backdrop-blur-sm lg:bg-white">
+                <Button onClick={onSalesClick} variant="outline" className="w-full flex items-center justify-center px-8 py-3 text-base md:py-4 md:text-lg bg-white/80 backdrop-blur-sm lg:bg-white">
                   Hubungi Sales
                 </Button>
               </div>
@@ -994,7 +994,8 @@ export default function App() {
       case 'home':
         return (
           <>
-            <Hero onCtaClick={() => setActiveTab('docs')} />
+            <Hero onCtaClick={() => setActiveTab('docs')}
+              onSalesClick={() => setActiveTab('contact')} />
             <IntegrationSteps />
             <Features />
           </>
@@ -1004,7 +1005,9 @@ export default function App() {
       case 'contact':
         return <Contact />;
       default:
-        return <Hero />;
+        return <Hero onCtaClick={() => setActiveTab('docs')}
+          onSalesClick={() => setActiveTab('contact')} />
+
     }
   };
 
